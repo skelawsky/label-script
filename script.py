@@ -16,8 +16,11 @@ with open(fileReadNamePath, 'r', encoding='utf-8') as f:
 # Saving lines to file
             if linename:
                 fCleared.write((line.strip().replace('<name>','').replace('</name>','')))
+                fCleared.write(' ')
             elif lineadress:
                 fCleared.write((line.strip().replace('<address>', '').replace('</address>', '')))
+                fCleared.write(' ')
             elif linenumber:
                 fCleared.write((line.strip().replace('<phoneNumber>', '').replace('</phoneNumber>', '')))
+                fCleared.write(' ')
                 fCleared.write('\n')
